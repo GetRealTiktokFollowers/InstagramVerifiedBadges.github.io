@@ -1,0 +1,230 @@
+/* Colors */
+$white: #fff
+$gray: #8e8e8e
+$blue: #2C96EA
+
+/* All */
+*
+  padding: 0
+  margin: 0
+  font-family: 'Lato', sans-serif
+  
+/* Default */
+body
+  background: linear-gradient(222deg, rgba(93,24,184,1) 0%, rgba(220,16,59,1) 100%)
+
+.text-standout
+  font-weight: 600
+  color: $blue
+
+button
+  display: block
+  margin: 0 auto
+  width: 400px
+  padding: 12px
+  background-color: $blue
+  border: 1px solid $blue
+  color: $white
+  cursor: pointer
+  font-size: 14px
+  transition: all 0.3s ease-in-out
+  &:focus
+    outline: 0
+  &:hover
+    background-color: #3ba5f9
+
+
+a
+  text-decoration: none
+
+/* nav */
+nav
+  background: $white
+  padding: 20px
+  box-shadow: 0 2px 20px rgba(0,0,0,0.075)
+  img
+    cursor: pointer
+    vertical-align: middle
+    width: 140px
+
+main
+  margin: 45px 0
+
+/* section
+section
+  width: 750px
+  margin: 0 auto
+  text-align: center
+  box-shadow: 0 2px 15px 5px rgba(0,0,0,0.12)
+  margin-bottom: 25px
+  p
+    max-width: 600px
+    margin: 0 auto
+
+.section-head, .section-body
+  background: $white
+  padding: 30px
+
+.section-body
+  background-color: #DEDEDE
+  p
+    color: $gray
+
+.section-head-description
+    p
+      color: $gray
+
+/* generating badge */
+.generating-badge, .human-verification
+  display: none
+
+.badge-generator
+  .section-head-title
+    img
+      vertical-align: middle
+      width: 28px
+      height: 28px
+      margin-right: 5px
+    h3
+      vertical-align: middle
+      display: inline-block
+  .section-body
+    p
+      margin-bottom: 5px
+    input
+      text-align: center
+      margin: 10px 10px 6px
+      padding: 12px
+      width: 400px
+      border: 1px solid #d3d3d3
+      font-size: 14px
+
+/* recent activity */
+.recent-activity
+  margin-bottom: 45px
+  h3
+    display: inline-block
+  .section-body
+    padding: 0
+
+.live-dot
+  width: 6px
+  height: 6px
+  border-radius: 50%
+  background-color: #E44C58
+  display: inline-block
+  position: relative
+  bottom: 9px
+  left: 3px
+  animation: blink 1s infinite linear
+
+@keyframes blink
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+.activities
+  max-height: 300px
+  overflow-y: scroll
+  padding: 25px
+
+.activity
+  display: flex
+  justify-content: space-between
+  background: $white
+  padding: 10px 20px
+  border-radius: 6px
+  box-shadow: 0 2px 25px rgba(0,0,0,0.075)
+  align-items: center
+  margin-bottom: 8px
+  &:hover
+    box-shadow: 0px 2px 30px rgba(0,0,0,0.15)
+
+.activity-avatar
+  width: 36px
+  height: 36px
+  vertical-align: middle
+  margin-right: 10px
+.activity-content
+  p
+    display: inline-block
+    vertical-align: middle
+    color: black
+.activity-badge
+  vertical-align: middle
+  width: 20px
+  height: 20px
+  margin-left: 4px
+.activity-timestamp
+  p
+    color: $gray
+
+/* generating badge */
+#progress-wrapper
+  width: 400px
+  margin: 0 auto 10px
+
+.human-verification
+  button
+    margin: 15px auto
+  .verification-text
+    margin-top: 15px
+  .awaiting-verification
+    img
+      width: 20px
+      height: 20px
+      vertical-align: middle
+      margin-right: 8px
+      animation: spin 0.75s infinite linear
+    span
+      color: $gray
+      vertical-align: middle
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(359deg)
+
+@media screen and (max-width: 900px)
+  section
+    width: 500px
+  .badge-generator .section-body input, button, #progress-wrapper
+    width: 300px
+@media screen and (max-width: 600px)
+  body
+    background: $white
+  nav
+    box-shadow: 0 2px 25px rgba(0,0,0,0.15)
+    position: relative
+    z-index: 9999
+  section
+    margin: 0
+    width: 100%
+    box-shadow: none
+  main
+    margin: 0
+    position: relative
+    z-index: 0
+@media screen and (max-width: 400px)
+  .badge-generator .section-body input, button, #progress-wrapper
+    width: 250px
+  nav
+    padding: 15px
+    img
+      width: 115px
+  .human-verification 
+    .section-head-description
+      display: none
+    .section-body p:first-child
+      padding: 15px
+      background: linear-gradient(180deg, white 0%, #e9e9e9 100%)
+      border-radius: 6px
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1)
+@media screen and (max-width: 370px)
+  .badge-generator .section-head-description
+    display: none
+@media screen and (max-width: 340px)
+  .badge-generator .section-body input, button, #progress-wrapper
+    width: 220px
